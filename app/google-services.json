@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "114051679339",
+    "project_id": "comps-project-76c45",
+    "storage_bucket": "comps-project-76c45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114051679339:android:0dbfb4bb39f344c4bd1d2e",
+        "android_client_info": {
+          "package_name": "com.example.seminarproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114051679339-75ldsbebibnehrsn38ticrfo10sfqbdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYS2ax7xm6zyCUKv4Z1bI_Q939emsoO_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114051679339-75ldsbebibnehrsn38ticrfo10sfqbdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
