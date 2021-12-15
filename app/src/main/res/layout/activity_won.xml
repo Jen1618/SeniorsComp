@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#673AB7">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,25 +21,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView_intro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Your total score was:"
             android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:text="Vocabulary Cards"
-            android:textSize="24sp" />
+            android:textColor="@color/white"
+            android:layout_marginTop="55dp"
+            android:textSize="35dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_vocabcards"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="12dp" />
+        <TextView
+            android:id="@+id/textView_resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:textSize="45dp"
+            android:textColor="@color/white"/>
+
+
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

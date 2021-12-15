@@ -20,7 +20,7 @@ import androidx.cardview.widget.CardView;
 import java.util.Collections;
 import java.util.List;
 
-public class MatchingGame extends AppCompatActivity {
+public class QuestionActivity extends AppCompatActivity {
 
     CountDownTimer countDownTimer;
     int timerValue = 20;
@@ -44,13 +44,13 @@ public class MatchingGame extends AppCompatActivity {
 
         // ArrayList<String> listofQ = (ArrayList<String>)getIntent().getSerializableExtra("data");
         progressBar = findViewById(R.id.quiz_timer);
-        allQuestionsList = ActivitySelection.listM;
+        allQuestionsList = ActivitySelection.listQ;
         Collections.shuffle(allQuestionsList);
-        modelclass = ActivitySelection.listM.get(index);
+        modelclass = ActivitySelection.listQ.get(index);
 
         setAllData();
 
-        countDownTimer = new CountDownTimer(20000, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) { //Change to add more time
             @Override
             public void onTick(long millisUntilFinished) {
                 timerValue = timerValue - 1;
@@ -59,14 +59,14 @@ public class MatchingGame extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Dialog dialog = new Dialog(MatchingGame.this); //R.style.Dialogue does not work
+                Dialog dialog = new Dialog(QuestionActivity.this); //R.style.Dialogue does not work
                 dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
                 dialog.setContentView(R.layout.timeout_dialog);
 
                 dialog.findViewById(R.id.button_tryAgain).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MatchingGame.this, QuestionActivity.class);
+                        Intent intent = new Intent(QuestionActivity.this, QuestionActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -140,7 +140,7 @@ public class MatchingGame extends AppCompatActivity {
     }
 
     private void GameFinished() {
-        Intent intent = new Intent(MatchingGame.this, FinishedActivity.class);
+        Intent intent = new Intent(QuestionActivity.this, FinishedActivity.class);
         intent.putExtra("correct", correctCount);
         intent.putExtra("wrong", incorrectCount);
         startActivity(intent);
@@ -171,7 +171,7 @@ public class MatchingGame extends AppCompatActivity {
         disableButton();
         button_next.setEnabled(true);
         if (modelclass.getOptionA().equals(modelclass.getAnswer())) {
-            cardA.setCardBackgroundColor(getResources().getColor(R.color.green));
+           cardA.setCardBackgroundColor(getResources().getColor(R.color.green));
             if (index < ActivitySelection.listQ.size() - 1) {
                 Correct(cardA);
             } else {
@@ -187,7 +187,7 @@ public class MatchingGame extends AppCompatActivity {
         disableButton();
         button_next.setEnabled(true);
         if(modelclass.getOptionB().equals(modelclass.getAnswer())){
-            cardB.setCardBackgroundColor(getResources().getColor(R.color.green));
+           cardB.setCardBackgroundColor(getResources().getColor(R.color.green));
 
             if(index< ActivitySelection.listQ.size()-1){
                 Correct(cardB);
@@ -205,7 +205,7 @@ public class MatchingGame extends AppCompatActivity {
         disableButton();
         button_next.setEnabled(true);
         if(modelclass.getOptionC().equals(modelclass.getAnswer())){
-            cardC.setCardBackgroundColor(getResources().getColor(R.color.green));
+           cardC.setCardBackgroundColor(getResources().getColor(R.color.green));
 
             if(index< ActivitySelection.listQ.size()-1){
                 Correct(cardC);
@@ -223,7 +223,7 @@ public class MatchingGame extends AppCompatActivity {
         disableButton();
         button_next.setEnabled(true);
         if(modelclass.getOptionD().equals(modelclass.getAnswer())){
-            cardD.setCardBackgroundColor(getResources().getColor(R.color.green));
+          cardD.setCardBackgroundColor(getResources().getColor(R.color.green));
 
             if(index< ActivitySelection.listQ.size()-1){
                 Correct(cardD);

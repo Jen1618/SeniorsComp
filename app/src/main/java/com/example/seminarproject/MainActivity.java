@@ -9,7 +9,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+import com.squareup.picasso.Picasso;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_login;
     private String email;
     private String password;
+    private ImageView start;
 
     private FirebaseAuth mAuth;
     private FirebaseDatabase db;
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        start = findViewById(R.id.imageView_start);
+        Picasso.get().load("https://observer.com/wp-content/uploads/sites/2/2021/05/summer-movies-2021-new-e1620919489437.jpg?quality=80").into(start);
         button_next = findViewById(R.id.button_next);
         button_login = findViewById(R.id.button_login);
         editText_email = findViewById(R.id.editText_emailAddress);

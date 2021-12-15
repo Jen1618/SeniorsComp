@@ -33,6 +33,19 @@
             android:parentActivityName=".ActivitySelection"
             android:label=".MatchingGame">
         </activity>
+        <activity android:name=".QuestionActivity"
+            android:parentActivityName=".ActivitySelection"
+            android:label=".QuizGame">
+        </activity>
+        <activity android:name=".FinishedActivity"
+            android:parentActivityName=".QuestionActivity"
+            android:label=".QuizGame"></activity>
+        <activity android:name=".VocabCardInfo"
+            android:parentActivityName=".VocabCards"
+            android:label=".VocabCardInfo"></activity>
+        <activity android:name=".TranslationActivity"
+            android:parentActivityName=".ActivitySelection"
+            android:label=".TranslationActivity"></activity>
     </application>
 
 </manifest>

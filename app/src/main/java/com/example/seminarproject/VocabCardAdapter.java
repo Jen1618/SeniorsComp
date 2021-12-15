@@ -1,6 +1,7 @@
 package com.example.seminarproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,18 @@ public class VocabCardAdapter extends RecyclerView.Adapter<VocabCardAdapter.View
 
         holder.textView_word.setText(vocabcard.getWord());
         holder.textView_definition.setText(vocabcard.getDefinition());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), VocabCardInfo.class);
+                intent.putExtra("spanish word", vocabcard.getWord());
+                intent.putExtra("definition", vocabcard.getDefinition());
+                intent.putExtra("english word", vocabcard.getEngword());
+                intent.putExtra("phrase", vocabcard.getPhrase());
+                v.getContext().startActivity(intent);
+            }
+        });
 
     }
 

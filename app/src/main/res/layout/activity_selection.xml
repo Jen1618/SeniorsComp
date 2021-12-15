@@ -35,11 +35,9 @@
         android:id="@+id/imageView_game2"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="52dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_game3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:srcCompat="@drawable/cs" />
@@ -75,24 +73,11 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:text="Game #2"
+        android:text="Vocab Practice - Quiz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_game2" />
-
-    <ImageView
-        android:id="@+id/imageView_game3"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="12dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView_game2"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:srcCompat="@drawable/cs" />
 
     <TextView
         android:id="@+id/textView5"
@@ -107,16 +92,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_game3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
